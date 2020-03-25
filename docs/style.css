@@ -38,9 +38,6 @@ a {
 }
 
 .card-page {
-  /* border: 5px solid #000; */
-  /* height: 500px; */
-  /* width: 300px; */
   width: 35vw;
   height: 80vh;
   position: absolute;
@@ -50,10 +47,7 @@ a {
   top: 50%;
   margin-left: 0vw;
   margin-top: -43vh;
-
-  /* backface-visibility: hidden; */
-  /* -webkit-backface-visibility: visible; */
-  /* -webkit-backface-visibility: hidden; */
+  transform: translate3d(0,0,0);
 }
 
 #left {
@@ -85,7 +79,7 @@ a {
 
 .inner-left {
   position: absolute;
-  transform: rotateY(-180deg);
+  transform: translate3d(0,0,0) rotateY(-180deg);
   width: 100%;
   height: 100%;
   background-color: #eee;
@@ -138,6 +132,8 @@ a {
   overflow: scroll;
   height: 100%;
   padding-right: 20px;
+  font-size: 12px;
+  line-height: 1.3;
   /*margin: 0px 10px;*/
 
 }
@@ -146,9 +142,6 @@ a {
   margin: 0;
   padding: 0;
   margin-bottom: 15px;
-  font-size: 12px;
-  line-height: 14px;
-
 }
 
 .inner-right p {
@@ -260,7 +253,26 @@ section p {
   }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 2000px) {
+  .card-page {
+    width: 20vw;
+    height: 60vh;
+    margin-top: -30vh;
+    font-size: 22px;
+  }
+  #essay {
+    padding: 50px;
+    font-size: 18px;
+  }
+  section {
+    min-width: 18vw;
+  }
+  button {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1500px) {
 }
 
 @media (max-width: 950px) {

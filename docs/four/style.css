@@ -79,6 +79,7 @@ a {
   width: 100%;
   height: 100%;
   border: 1px solid #000;
+  /* border: 1px solid orange; */
   background-color: #eee;
 }
 
@@ -89,6 +90,7 @@ a {
   height: 100%;
   background-color: #eee;
   border: 1px solid #000;
+  /* border: 1px solid orange; */
   border-right: none;
   backface-visibility: hidden;
   -webkit-backface-visibility: visible;
@@ -103,6 +105,7 @@ a {
 
 .inner-right {
   border: 1px solid #000;
+  /* border: 1px solid orange; */
   width: 100%;
   height: 100%;
   background-color: #eee;
@@ -254,5 +257,81 @@ section p {
 @keyframes flip-open {
   100% {
     transform: translateX(0px) rotateY(-180deg);
+  }
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 950px) {
+}
+
+@media (max-width: 768px) {
+  #card {
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+    right: auto;
+    overflow: scroll;
+    border: 1px solid #000;
+    perspective: none;
+    background-color: #eee;
+  }
+  #description {
+    padding: 20px;
+  }
+  #left {
+    transform: translateX(0px) rotateY(-180deg);
+    transform: none;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 2;
+    animation-name: none;
+  }
+  .inner-left {
+    transform: none;
+    position: static;
+    padding: 0;
+    display: block;
+    border: none;
+    height: auto;
+  }
+  .inner-right {
+    border: none;
+    height: auto;
+    padding-top: 0;
+  }
+  #essay {
+    height: auto;
+  }
+  .card-page {
+    width: 100%;
+    height: auto;
+    position: static;
+    top: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .front {
+    border: 0;
+    margin: auto;
+    height: auto;
+    display: block;
+    position: static;
+  }
+
+  section {
+    min-width: 80vw;
+  }
+  h1 {
+    font-size: 40px;
+    padding: 20px;
+    padding-bottom: 0;
+    margin: 0;
+  }
+  h2 {
+    padding-top: 0;
+    margin-top: 0;
   }
 }

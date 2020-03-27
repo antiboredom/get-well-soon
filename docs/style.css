@@ -331,9 +331,13 @@ section p {
     border: none;
     height: auto;
     padding-top: 0;
+    padding: 20px;
+    padding-right: 0px;
+
   }
   #essay {
     height: auto;
+    padding-right: 20px;
   }
   .card-page {
     width: 100%;

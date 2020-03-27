@@ -15,7 +15,7 @@ body {
   );
   background-position: fixed;
   /*overflow: hidden;*/
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Helvetica', arial, sans-serif;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -33,7 +33,9 @@ a {
   right: 50%;
   perspective: 1500px;
   z-index: 1;
-
+  line-height: 1.3;
+  font-size: 13px;
+  /* font-family: Georgia, serif; */
   /* perspective-origin: calc(50% + 120px) 50%; */
 }
 
@@ -48,21 +50,25 @@ a {
   margin-left: 0vw;
   margin-top: -43vh;
   transform: translate3d(0,0,0);
+  background-color: #edeefa;
+  background-color: #eee;
 }
 
 #left {
   transform: translateX(0px) rotateY(-20deg);
-  background-color: rgba(255, 255, 255, 1);
   z-index: 2;
   animation-name: flip-open;
   animation-duration: 5.5s;
   animation-fill-mode: forwards;
   animation-delay: 2s;
+  /* background-image: url('rose5.jpg'); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 #right {
   z-index: 1;
-  background-color: #eee;
 }
 
 .front {
@@ -74,7 +80,6 @@ a {
   height: 100%;
   border: 1px solid #000;
   /* border: 1px solid orange; */
-  background-color: #eee;
 }
 
 .inner-left {
@@ -82,7 +87,6 @@ a {
   transform: translate3d(0,0,0) rotateY(-180deg);
   width: 100%;
   height: 100%;
-  background-color: #eee;
   border: 1px solid #000;
   /* border: 1px solid orange; */
   border-right: none;
@@ -95,6 +99,8 @@ a {
   justify-content: center;
   align-items: center;
   overflow: scroll;
+  background-color: #edeefa;
+  background-color: #eee;
 }
 
 .inner-right {
@@ -102,9 +108,8 @@ a {
   /* border: 1px solid orange; */
   width: 100%;
   height: 100%;
-  background-color: #eee;
   border-left: 1px solid #ccc;
-  padding: 20px;
+  padding: 40px;
   padding-right: 0px;
 
 
@@ -131,11 +136,14 @@ a {
 #essay {
   overflow: scroll;
   height: 100%;
-  padding-right: 20px;
-  font-size: 12px;
-  line-height: 1.3;
+  padding-right: 40px;
+  /* font-size: 12px; */
   /*margin: 0px 10px;*/
 
+}
+
+#essay h2 {
+  margin-top: 0;
 }
 
 #essay p {
@@ -181,12 +189,16 @@ h1 {
   font-weight: normal;
   padding: 40px;
   text-transform: uppercase;
+  /* font-family: Georgia, Serif; */
 }
 
 h2 {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: normal;
   color: rgb(150,150,150);
+  /* color: red; */
+  /* color: #555; */
+  font-style: italic;
 }
 
 h3 {
@@ -247,6 +259,15 @@ section p {
   cursor: pointer;
 }
 
+.centered {
+  text-align: center;
+}
+
+.small {
+  opacity: 0.5;
+  font-size: 0.9em;
+}
+
 @keyframes flip-open {
   100% {
     transform: translateX(0px) rotateY(-180deg);
@@ -288,7 +309,6 @@ section p {
     overflow: scroll;
     border: 1px solid #000;
     perspective: none;
-    background-color: #eee;
   }
   #description {
     padding: 20px;
@@ -296,7 +316,6 @@ section p {
   #left {
     transform: translateX(0px) rotateY(-180deg);
     transform: none;
-    background-color: rgba(255, 255, 255, 1);
     z-index: 2;
     animation-name: none;
   }

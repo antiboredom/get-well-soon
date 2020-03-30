@@ -349,16 +349,16 @@ section p {
     top: 0;
     left: 0;
     margin: auto;
+    background: #eee;
   }
-
   .front {
     border: 0;
     margin: auto;
     height: auto;
     display: block;
     position: static;
+    background: #eee;
   }
-
   section {
     min-width: 80vw;
   }

@@ -14,14 +14,13 @@ body {
     rgba(255, 255, 255, 1) 100%
   );
   background-position: fixed;
-  font-family: 'Helvetica', arial, sans-serif;
+  font-family: "Helvetica", arial, sans-serif;
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
 a {
-
   color: red;
   text-decoration: none;
 }
@@ -46,7 +45,7 @@ a {
   top: 50%;
   margin-left: 0vw;
   margin-top: -43vh;
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
 }
 
 #left {
@@ -73,13 +72,17 @@ a {
   width: 100%;
   height: 100%;
   border: 1px solid #000;
-  background: linear-gradient(133deg, rgba(238,238,238,1) 0%, rgba(179,179,179,1) 100%); 
+  background: linear-gradient(
+    133deg,
+    rgba(238, 238, 238, 1) 0%,
+    rgba(179, 179, 179, 1) 100%
+  );
   -webkit-backface-visibility: hidden;
 }
 
 .inner-left {
   position: absolute;
-  transform: translate3d(0,0,0) rotateY(-180deg);
+  transform: translate3d(0, 0, 0) rotateY(-180deg);
   width: 100%;
   height: 100%;
   border: 1px solid #000;
@@ -102,7 +105,11 @@ a {
   border-left: 1px solid #ccc;
   padding: 40px;
   padding-right: 0px;
-  background: linear-gradient(133deg, rgb(255, 255, 255) 0%, rgb(220, 220, 220) 100%);
+  background: linear-gradient(
+    133deg,
+    rgb(255, 255, 255) 0%,
+    rgb(220, 220, 220) 100%
+  );
 }
 
 #wishes {
@@ -111,14 +118,13 @@ a {
   overflow: scroll;
   height: 100%;
   padding-right: 40px;
-  font-family: 'Helvetica', sans-serif;
+  font-family: "Helvetica", sans-serif;
 }
 
 #essay {
   overflow: scroll;
   height: 100%;
   padding-right: 40px;
-
 }
 
 #essay h2 {
@@ -146,15 +152,13 @@ a {
   top: 50%;
   margin-left: 0vw;
   margin-top: -43vh;
-
 }
 
-
 nav {
-    position: fixed;
-    background-color: #fff;
-    padding: 5px;
-    border: 1px solid #999;
+  position: fixed;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
 }
 
 h1 {
@@ -167,7 +171,7 @@ h1 {
 h2 {
   font-size: 16px;
   font-weight: normal;
-  color: rgb(150,150,150);
+  color: rgb(150, 150, 150);
   font-style: italic;
 }
 
@@ -189,7 +193,6 @@ h3 {
   height: 100%;
   align-items: top;
   z-index: 0;
-
 }
 
 section {
@@ -205,7 +208,6 @@ section {
   font-size: 12px;
   font-size: 10px;
 }
-
 
 section p {
   margin: 0;

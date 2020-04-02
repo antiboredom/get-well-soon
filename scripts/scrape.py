@@ -130,6 +130,26 @@ def get_all_comments():
             pass
 
 
-# get_pages()
-# get_comments("https://gateway.gofundme.com/web-gateway/v1/feed/hope-for-pedro/comments")
-get_all_comments()
+if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Scrape gofundme")
+    parser.add_argument(
+        "--get-urls",
+        dest="urls",
+        action="store_true",
+        help="get urls of medical gofundmes",
+    )
+    parser.add_argument(
+        "--get-comments",
+        dest="comments",
+        action="store_true",
+        help="get comments from a list of urls",
+    )
+
+    args = parser.parse_args()
+
+    if args.urls:
+        get_pages()
+    elif args.comments:
+        get_all_comments()

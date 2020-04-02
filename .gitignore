@@ -3,6 +3,7 @@ data/raw/ascii
 data/raw/lineStrokes
 data/raw/original
 data/processed
+scripts/comments/*.json
 
 logs
 predictions

@@ -171,7 +171,8 @@ h1 {
 h2 {
   font-size: 16px;
   font-weight: normal;
-  color: rgb(150, 150, 150);
+  /* color: rgb(150, 150, 150); */
+  color: #696969;
   font-style: italic;
 }
 

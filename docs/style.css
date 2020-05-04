@@ -131,6 +131,10 @@ a {
   margin-top: 0;
 }
 
+h2 a {
+  color: inherit;
+}
+
 #essay p {
   margin: 0;
   padding: 0;

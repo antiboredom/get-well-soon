@@ -29,4 +29,4 @@ svgwrite==1.1.12
 tensorboard==1.8.0
 tensorflow==1.8.0
 termcolor==1.1.0
-Werkzeug==0.14.1
+Werkzeug==0.15.3

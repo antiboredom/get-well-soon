@@ -122,7 +122,7 @@ const sections = [
 
 const container = document.querySelector(".container");
 
-function startAnimating(el, speed=1, fps=30, startDelay=100) {
+function startAnimating(el, speed = 1, fps = 30, startDelay = 100) {
   const restartTime = 2000;
   const goToTopDelay = 5000;
   let frameId;
@@ -148,7 +148,6 @@ function startAnimating(el, speed=1, fps=30, startDelay=100) {
       then = now - (elapsed % fpsInterval);
 
       if (speed > 0) {
-
         if (el.scrollTop < el.scrollHeight - el.clientHeight) {
           el.scrollTop += speed;
         } else {
@@ -170,14 +169,12 @@ function startAnimating(el, speed=1, fps=30, startDelay=100) {
             frameId = requestAnimationFrame(scrollWishes);
           }, goToTopDelay);
         }
-
       }
     }
   }
 
   scrollWishes();
 }
-
 
 function closeModal(el) {
   el.addEventListener("click", (e) => {
@@ -193,16 +190,15 @@ function openModal(el) {
 }
 
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function makeSection(url, i) {
   const el = document.createElement("section");
   container.appendChild(el);
 
-
   try {
-    await sleep(i*400)
+    await sleep(i * 400);
     let response = await fetch("sorts/" + url);
     let html = await response.text();
     el.innerHTML = html;
@@ -211,16 +207,19 @@ async function makeSection(url, i) {
   }
 }
 
-for (let i=0; i<sections.length;i++){
+for (let i = 0; i < sections.length; i++) {
   makeSection(sections[i], i);
 }
+if (document.querySelector("#view-button")) {
+  document.querySelector("#view-button").addEventListener("click", () => {
+    document.querySelector("#card").style.display = "none";
+    document.querySelector("#about-button").style.display = "block";
+  });
+}
 
-document.querySelector('#view-button').addEventListener("click", ()=> {
-  document.querySelector("#card").style.display = "none";
-  document.querySelector("#about-button").style.display = "block";
-});
-
-document.querySelector('#about-button').addEventListener("click", ()=> {
-  document.querySelector("#card").style.display = "block";
-  document.querySelector("#about-button").style.display = "none";
-});
+if (document.querySelector("#about-button")) {
+  document.querySelector("#about-button").addEventListener("click", () => {
+    document.querySelector("#card").style.display = "block";
+    document.querySelector("#about-button").style.display = "none";
+  });
+}

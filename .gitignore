@@ -5,6 +5,8 @@ data/raw/original
 data/processed
 scripts/comments/*.json
 
+node_modules/
+
 logs
 predictions
 

@@ -1,0 +1,15 @@
+{
+  "name": "get-well-soon-prints",
+  "version": "1.0.0",
+  "description": "",
+  "main": "make_pdf.js",
+  "dependencies": {
+    "puppeteer": "^5.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -13,7 +13,9 @@ async function render(page, filename, _options = {}) {
     margin: 0.5,
     lineHeight: 1,
     columns: 3,
+    minFontSize: 11,
   };
+
   const options = { ...defaults, ..._options };
 
   const htmlFile = path.resolve(filename);
@@ -24,7 +26,7 @@ async function render(page, filename, _options = {}) {
     body {
       box-sizing: border-box;
       line-height: ${options.lineHeight};
-      font-size: 28pt;
+      font-size: ${options.minFontSize * 2}pt;
       columns: ${options.columns};
       column-fill: auto;
       column-gap: ${options.margin}in;
@@ -42,6 +44,7 @@ async function render(page, filename, _options = {}) {
 
     @page {
       margin: 0.0in;
+      margin: ${options.margin}in;
       size: ${options.width}in ${options.height}in;
     }
   </style>`;
@@ -63,7 +66,7 @@ async function render(page, filename, _options = {}) {
 
   await page.goto(`data:text/html,${html}`, { waitUntil: "networkidle0" });
 
-  await page.evaluate(() => {
+  await page.evaluate((options) => {
     function isOverflown(element) {
       return (
         element.scrollHeight > element.clientHeight ||
@@ -71,13 +74,28 @@ async function render(page, filename, _options = {}) {
       );
     }
 
-    let fontSize = 14;
+    function setPage(pages=1) {
+      document.body.style.height = `${options.height * pages + options.margin*(pages)*2}in`;
 
-    while (isOverflown(document.body)) {
-      fontSize -= 0.1;
+      let fontSize = options.minFontSize * 2;
       document.body.style.fontSize = fontSize + "pt";
+
+      while (isOverflown(document.body)) {
+        fontSize -= 0.1;
+        document.body.style.fontSize = fontSize + "pt";
+      }
+
+      if (fontSize < options.minFontSize) {
+        setPage(pages + 1);
+      } else {
+        // document.body.style.height = "auto";
+        document.body.style.padding = "0";
+      }
     }
-  });
+
+    setPage(1);
+
+  }, options);
 
   const outname = `${path.basename(filename)}.${options.width}_${
     options.height
@@ -99,6 +117,7 @@ async function main() {
     margin: 0.5,
     lineHeight: 1,
     columns: 3,
+    minFontSize: 10,
   };
   await render(page, "../docs/sorts/all my.html", options);
 

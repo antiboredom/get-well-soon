@@ -16,7 +16,7 @@ matplotlib==2.2.2
 mock==3.0.5
 numpy==1.14.3
 pandas==0.22.0
-Pillow==6.2.2
+Pillow==8.2.0
 protobuf==3.5.2.post1
 pyparsing==2.2.0
 python-dateutil==2.7.3

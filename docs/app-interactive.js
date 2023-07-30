@@ -207,7 +207,7 @@ function startAuto() {
     const els = sectionsInView();
     for (let i = 0; i < els.length; i++) {
       const el = els[i];
-      smoothScroll(el, 10, i % 2 == 0);
+      smoothScroll(el, Math.random()*10+10, i % 2 == 0);
     }
     timeout = setTimeout(startAuto, THRESH);
   }, 2000);

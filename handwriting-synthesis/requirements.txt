@@ -2,7 +2,7 @@ absl-py==0.2.0
 astor==0.6.2
 backports.functools-lru-cache==1.6.1
 backports.weakref==1.0.post1
-bleach==1.5.0
+bleach==3.3.0
 cycler==0.10.0
 enum34==1.1.9
 funcsigs==1.0.2

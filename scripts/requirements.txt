@@ -28,7 +28,7 @@ spacy==2.2.3
 srsly==1.0.1
 thinc==7.3.1
 tqdm==4.43.0
-urllib3==1.25.8
+urllib3==1.26.5
 w3lib==1.21.0
 wasabi==0.6.0
 websockets==8.1
